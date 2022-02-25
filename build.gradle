@@ -2,16 +2,22 @@ plugins {
     id 'java'
 }
 
-group 'net.nllk'
+group 'com.my.flyway'
 
-sourceCompatibility = 1.11
+sourceCompatibility = 1.8
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
 
 jar {
     manifest {
         attributes(
-                'Main-Class': 'net.nllk.flywaychecksumtool.FlywayChecksumTool'
+                'Main-Class': 'com.my.flyway.FlywayChecksumTool'
         )
     }
+    with sourcesJar
 }
 
 repositories {
@@ -21,3 +27,9 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+

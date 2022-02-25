@@ -1,8 +1,4 @@
-package net.nllk.flywaychecksumtool;
-
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.zip.CRC32;
+package com.my.flyway;
 
 public class FlywayChecksumTool {
 
@@ -17,7 +13,7 @@ public class FlywayChecksumTool {
         }
 
         int checksum = LoadableResource.checksum(args[0]);
-        System.out.printf("Checksum: %d, File: %s\n", checksum, args[0]);
+        System.out.printf(checksum+"");
     }
 
     private static void printHelpAndExit() {

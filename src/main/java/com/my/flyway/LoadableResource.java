@@ -1,4 +1,4 @@
-package net.nllk.flywaychecksumtool;
+package com.my.flyway;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package net.nllk.flywaychecksumtool;
+package com.my.flyway;
 
 /*
  * LATEST: https://github.com/flyway/flyway/blob/master/flyway-core/src/main/java/org/flywaydb/core/internal/util/BomFilter.java
